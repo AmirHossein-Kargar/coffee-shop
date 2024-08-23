@@ -34,3 +34,46 @@ gsap.from(".title", { opacity: 0, duration: 1, delay: 1.6, y: 30 });
 gsap.from(".description", { opacity: 0, duration: 1, delay: 1.8, y: 30 });
 gsap.from(".btn", { opacity: 0, duration: 1, delay: 2.1, y: 30 });
 gsap.from(".image", { opacity: 0, duration: 1, delay: 2.6, y: 30 });
+
+// ! SPA ADDED
+function router() {
+  const routes = [
+    { path: "/", view: () => console.log("dashboard page") },
+    { path: "/about", view: () => console.log("about page") },
+    { path: "/menu", view: () => console.log("menu page") },
+    { path: "/contact", view: () => console.log("contact page") },
+  ];
+
+  const potentialRoutes = routes.map((item) => {
+    return { route: item, isMatch: location.pathname == item.path };
+  });
+  //   console.log(potentialRoutes);
+
+  let match = potentialRoutes.find((route) => route.isMatch);
+  if (!match) {
+    match = {
+      route: { path: "/404", view: () => console.log("not found page") },
+      isMatch: true,
+    };
+  }
+  console.log(match.route.view());
+}
+
+// ? push user to new URL
+function navigateTo(url) {
+  history.pushState(null, null, url);
+  router();
+}
+
+window.addEventListener('popstate', router)
+
+// ? when DOM loaded
+document.addEventListener("DOMContentLoaded", () => {
+  document.body.addEventListener("click", (e) => {
+    if (e.target.hasAttribute("data-link")) {
+      e.preventDefault();
+      navigateTo(e.target.href);
+    }
+  });
+  router();
+});
