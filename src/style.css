@@ -4,6 +4,7 @@
   --white-color: #fff;
   --secondary-color: #d3ad7f;
   --primary-color: #2a201c;
+  --transition: transition: 0.2s linear;;
 }
 
 * {
@@ -98,6 +99,8 @@ span {
   background: var(--secondary-color);
   cursor: pointer;
   border-radius: 2rem;
+  /* transition: var(--transition); */
+  transition: all .25s ease-in;
 }
 .start-btn:hover {
   /* letter-spacing: .2rem; */
