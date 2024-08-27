@@ -4,7 +4,7 @@
   --white-color: #fff;
   --secondary-color: #d3ad7f;
   --primary-color: #2a201c;
-  --dark-color: #1c1917
+  --dark-color: #1c1917;
 }
 .nav-colored {
   background-color: var(--dark-color);
@@ -36,6 +36,7 @@ section {
 }
 .container {
   background: var(--primary-color);
+  position: relative;
 }
 /* ? header */
 .header {
@@ -48,7 +49,7 @@ section {
   justify-content: space-between;
   padding: 2rem 9%;
   z-index: 2;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .header #menu {
   display: none;
@@ -72,7 +73,7 @@ section {
 }
 .navbar a:hover {
   color: var(--secondary-color);
-  letter-spacing: .2rem
+  letter-spacing: 0.2rem;
 }
 .navbar #close {
   display: none;
@@ -104,8 +105,11 @@ section {
 span {
 }
 .title,
-span:hover, .description, .card__price, .card__description {
-pointer-events: none;
+span:hover,
+.description,
+.card__price,
+.card__description {
+  pointer-events: none;
 }
 
 .title span {
@@ -130,7 +134,8 @@ pointer-events: none;
   cursor: pointer;
   border-radius: 2rem;
 }
-.start-btn:hover, .btn:hover {
+.start-btn:hover,
+.btn:hover {
   /* letter-spacing: .2rem; */
   background-color: transparent;
   border: 1px solid white;
@@ -149,20 +154,116 @@ pointer-events: none;
   width: 100%;
 }
 
+.menu {
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 270px;
+  height: 420px;
+  background-color: inherit;
+  border-radius: 3rem;
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+  border: 1px solid white;
+}
+.card__image,
+.card__image img {
+  border-radius: inherit;
+}
+.card img {
+  width: 100%;
+  height: 20rem;
+}
+
+.card__title {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.card__title:hover {
+  letter-spacing: 0.2rem;
+  color: var(--secondary-color);
+}
+.card__price {
+  font-size: 2rem;
+  margin: 1.5rem 0;
+}
+.card__description {
+  font-size: 1.5rem;
+  width: 100%;
+  height: 5rem;
+  line-height: 1.4;
+}
+
+.card__btn {
+  margin: 2rem 0;
+}
+
+.about {
+  background-color: transparent;
+  color: var(--white-color);
+  margin-top: 15rem;
+}
+.about__desc {
+  font-size: 1.5rem;
+  text-wrap: wrap;
+  width: 70%;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 1.8;
+  margin-top: -3rem;
+}
+.line-1 {
+  /* position: relative; */
+  /* top: 50%;   */
+  font-size: 8rem;
+  width: 24em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+
+/* Animation */
+.anim-typewriter {
+  animation: typewriter 1s steps(44) 1s 1 normal both,
+    blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 4.5em;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
 /* ? Responsive */
-@media (max-width: 992px) {
+@media (max-width: 1536px) {
+}
+@media (max-width: 1280px) {
+}
+@media (max-width: 1024px) {
   html {
     font-size: 55%;
   }
-}
-@media (max-width: 1536px) {
-
-}
-@media (max-width: 1280px) {
-
-}
-@media (max-width: 1024px) {
-
+  .content {
+    text-align: center;
+  }
 }
 
 @media (max-width: 768px) {
@@ -215,65 +316,17 @@ pointer-events: none;
   .start-btn {
     font-size: 2rem;
   }
+  .shopping {
+    left: 50%;
+  }
 }
 @media (max-width: 576px) {
-
 }
 @media (max-width: 320px) {
-
 }
-
 
 @media (max-width: 450px) {
   html {
     font-size: 50%;
   }
 }
-
-.menu {
-  display: flex;
-  gap: 5rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.card {
-  width: 270px;
-  height: 420px;
-  background-color: inherit;
-  border-radius: 3rem;
-  font-size: 2rem;
-  text-align: center;
-  color: white;
-  border: 1px solid white;
-}
-.card__image, .card__image img {
-  border-radius: inherit;
-}
-.card img {
-  width: 100%;
-  height: 20rem;
-}
-
-.card__title {
-  font-size: 2rem;
-  cursor: pointer;
-}
-.card__title:hover {
-  letter-spacing: .2rem;
-  color: var(--secondary-color);
-}
-.card__price {
-  font-size: 2rem;
-  margin: 1.5rem 0;
-}
-.card__description {
-  font-size: 1.5rem;
-  width: 100%;
-  height: 5rem;
-}
-
-.card__btn {
-margin: 2rem 0;
-}
-

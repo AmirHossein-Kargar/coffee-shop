@@ -1,5 +1,7 @@
 import { productsData } from "./products.js";
 const menu = document.querySelector(".menu");
+let nav = document.querySelector(".header .navbar");
+const logo = document.querySelector(".logo");
 
 // ? GET DATA
 class Products {
@@ -12,31 +14,42 @@ class UI {
   displayProducts(products) {
     let result = "";
     products.forEach((item) => {
-      result +=`<div class="card" id="card">
+      result += `<div class="card" id="card">
         <div class="card__image">
           <img src=${item.imageUrl} alt="">
         </div>
         <p class="card__title">${item.title}</p>
         <p class="card__price">${item.price}$</p>
         <p class="card__description">${item.desc}</p>
-        <a href="#" class="btn card__btn" data-id=${item.id}>ORDER NOW</a>
+        <button type="submit" href="${item.href}" class="btn card__btn" data-id=${item.id}>ORDER NOW</button>
        </div>`;
-       menu.innerHTML = result
+      menu.innerHTML = result;
     });
   }
 }
 // ? LOCAL STORAGE
-class Storage {}
+class Storage {
+  static saveProducts(products) {
+    localStorage.setItem("products", JSON.stringify(products));
+  }
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   const products = new Products();
   const productsData = products.getProduct();
-  // console.log(productsData);
-  const ui = new UI()
-  ui.displayProducts(productsData)
-});
+  const ui = new UI();
+  ui.displayProducts(productsData);
+  Storage.saveProducts(productsData);
 
-let nav = document.querySelector(".header .navbar");
+  // ? When button clicked
+  const cardBtn = document.querySelectorAll(".card__btn");
+  let cards = [...cardBtn];
+  cards.forEach((item) => {
+    item.addEventListener("click", () => {
+      item.innerHTML = "added to cart";
+    });
+  });
+});
 
 document.querySelector("#menu").addEventListener("click", () => {
   nav.classList.add("active");
@@ -72,6 +85,8 @@ gsap.from(".title", { opacity: 0, duration: 1, delay: 1.6, y: 30 });
 gsap.from(".description", { opacity: 0, duration: 1, delay: 1.8, y: 30 });
 gsap.from(".btn", { opacity: 0, duration: 1, delay: 2.1, y: 30 });
 gsap.from(".image", { opacity: 0, duration: 1, delay: 2.6, y: 30 });
+gsap.from(".menu", { opacity: 0, duration: 1, delay: 2.6, y: 30 });
+gsap.from(".about__desc", { opacity: 0, duration: 1, delay: 1.8, y: 30 });
 
 // ? Logic for changing background color when we scroll !
 const myNav = document.querySelector(".header");
@@ -87,3 +102,5 @@ window.onscroll = () => {
     myNav.classList.remove("nav-colored");
   }
 };
+
+// ? Btn events
