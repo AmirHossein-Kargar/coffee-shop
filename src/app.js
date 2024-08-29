@@ -1,4 +1,6 @@
 import { productsData } from "./products.js";
+import "./scroll.css";
+import "./style.css";
 const menu = document.querySelector(".menu");
 let nav = document.querySelector(".header .navbar");
 const logo = document.querySelector(".logo");
@@ -47,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
   cards.forEach((item) => {
     item.addEventListener("click", () => {
       item.innerHTML = "added to cart";
+      item.classList.add("card__btn-clicked");
     });
   });
 });
