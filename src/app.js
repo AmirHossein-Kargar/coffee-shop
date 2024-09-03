@@ -1,6 +1,4 @@
 import { productsData } from "./products.js";
-import "./scroll.css";
-import "./style.css";
 const menu = document.querySelector(".menu");
 let nav = document.querySelector(".header .navbar");
 const logo = document.querySelector(".logo");

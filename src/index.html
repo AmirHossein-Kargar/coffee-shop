@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coffee Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scroll.css">
     <!-- ? Font Awesome CDN -->
     <link
       rel="stylesheet"
@@ -19,6 +21,13 @@
         <a href="#" class="logo">
           <img src="images/logo.png" alt="" />
         </a>
+        <div class="language">
+          <h2 class="language__title">Select A Language:</h2>
+          <select name="" id="">
+            <option value="en">English</option>
+            <option value="fa">فارسی</option>
+          </select>
+        </div>
         <nav class="navbar">
           <div id="close" class="fas fa-times"></div>
           <a href="#" class="nav_item">Home</a>
@@ -59,6 +68,6 @@
     <!-- ? GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <!-- ? JavaScript Main File -->
-    <script type="module" src="/public/bundle.js"></script>
+    <script type="module" src="/src/app.js"></script>
   </body>
 </html>

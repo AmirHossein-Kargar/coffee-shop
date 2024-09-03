@@ -229,7 +229,6 @@ span:hover,
   margin: 0 1rem;
   font-size: 1.5rem;
 }
-
 .line-1 {
   /* position: relative; */
   /* top: 50%;   */
@@ -241,6 +240,27 @@ span:hover,
   white-space: nowrap;
   overflow: hidden;
   transform: translateY(-50%);
+}
+
+.language {
+  display: flex;
+  color: var(--white-color);
+  align-items: center;
+}
+.language__title {
+  margin: 0 1.5rem;
+  letter-spacing: 0.2rem;
+}
+.language select {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 0.25rem 2rem;
+  cursor: pointer;
+}
+.language option {
+  color: black;
 }
 
 /* Animation */
