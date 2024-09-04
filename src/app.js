@@ -1,4 +1,5 @@
 import { productsData } from "./products.js";
+import { productsFa } from "./productsFa.js";
 const menu = document.querySelector(".menu");
 let nav = document.querySelector(".header .navbar");
 const logo = document.querySelector(".logo");
@@ -6,7 +7,11 @@ const logo = document.querySelector(".logo");
 // ? GET DATA
 class Products {
   getProduct() {
-    return productsData;
+    if (window.location.pathname == "/src/persian.html") {
+      return productsFa;
+    } else {
+      return productsData;
+    }
   }
 }
 // ? SHOW DATA
@@ -21,7 +26,7 @@ class UI {
         <p class="card__title">${item.title}</p>
         <p class="card__price">${item.price}$</p>
         <p class="card__description">${item.desc}</p>
-        <button type="submit" href="${item.href}" class="btn card__btn" data-id=${item.id}>ORDER NOW</button>
+        <button type="submit" href="${item.href}" class="btn card__btn" data-id=${item.id}>${item.buttonTitle}</button>
        </div>`;
       menu.innerHTML = result;
     });
@@ -74,6 +79,7 @@ function move(e) {
 
 // ? Animation
 gsap.from(".logo", { opacity: 0, duration: 1, delay: 2, y: 10 });
+gsap.from(".language", { opacity: 0, duration: 1, delay: 2, y: 10 });
 gsap.from(".navbar .nav_item", {
   opacity: 0,
   duration: 1,
@@ -87,6 +93,7 @@ gsap.from(".description", { opacity: 0, duration: 1, delay: 1.8, y: 30 });
 gsap.from(".btn", { opacity: 0, duration: 1, delay: 2.1, y: 30 });
 gsap.from(".image", { opacity: 0, duration: 1, delay: 2.6, y: 30 });
 gsap.from(".menu", { opacity: 0, duration: 1, delay: 2.6, y: 30 });
+// gsap.from(".language", { opacity: 0, duration: 1, delay: 2.6, y: 30 });
 gsap.from(".about__desc", { opacity: 0, duration: 1, delay: 1.8, y: 30 });
 
 // ? Logic for changing background color when we scroll !
@@ -104,4 +111,11 @@ window.onscroll = () => {
   }
 };
 
-// ? Btn events
+const langLinks = document.querySelectorAll(".language__link");
+
+// langLinks.forEach((link) => {
+//   link.addEventListener("click", () => {
+//     document.querySelector(".language__link--active")?.classList.remove("language__link--active");
+//     link.classList.add("language__link--active");
+//   });
+// });

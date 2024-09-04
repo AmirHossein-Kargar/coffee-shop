@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@font-face {
+  font-family: "iranYekan";
+  src: url("./iranyekan/woff2/IRANYekanWebLight.woff2");
+}
 
 :root {
   --white-color: #fff;
@@ -20,7 +24,7 @@
 }
 
 * {
-  font-family: "Nunito", sans-serif;
+  font-family: "Nunito", "iranYekan", sans-serif;
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -242,7 +246,7 @@ span:hover,
   transform: translateY(-50%);
 }
 
-.language {
+/* .language {
   display: flex;
   color: var(--white-color);
   align-items: center;
@@ -261,8 +265,44 @@ span:hover,
 }
 .language option {
   color: black;
+} */
+
+.language {
+  display: flex;
+  color: var(--white-color);
+  align-items: center;
+  justify-content: center;
+}
+.language__title {
+  margin: 0 2rem;
+}
+/* .language__link:hover {
+  color: var(--secondary-color);
+} */
+.language .language__link--active {
+  color: var(--secondary-color);
+}
+.language a {
+  color: var(--white-color);
+  font-size: 1.5rem;
+}
+.row-reverse {
+  flex-direction: row-reverse;
 }
 
+.language__img {
+  width: 2rem;
+  height: 2rem;
+  padding: 1rem;
+}
+.english,
+.persian {
+  display: flex;
+  align-items: center;
+}
+.english {
+  margin-right: 2rem;
+}
 /* Animation */
 .anim-typewriter {
   animation: typewriter 1s steps(44) 1s 1 normal both,

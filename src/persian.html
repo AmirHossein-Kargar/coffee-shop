@@ -21,41 +21,46 @@
         <a href="#" class="logo">
           <img src="images/logo.png" alt="" />
         </a>
-        <div class="language">
-          <h2 class="language__title">Select A Language:</h2>
+        <div class="language row-reverse">
+          <h2 class="language__title">:زبان خود را انتخاب کنید</h2>
           <div class="english">
             <img
-            class="language__img"
+              class="language__img"
               src="https://purecatamphetamine.github.io/country-flag-icons/3x2/US.svg"
               alt="United States"
             />
-            <a href="#" class="language__link language__link--active" language="english">English</a>
+            <a href="index.html" class="language__link" language="english"
+              >English</a
+            >
           </div>
           <div class="persian">
             <img
-            class="language__img"
+              class="language__img"
               src="https://purecatamphetamine.github.io/country-flag-icons/3x2/IR.svg"
               alt="Iran"
             />
-            <a href="persian.html" class="language__link" language="persian">فارسی</a>
+            <a
+              href="#"
+              class="language__link language__link--active"
+              language="persian"
+              >فارسی</a
+            >
           </div>
         </div>
         <nav class="navbar">
           <div id="close" class="fas fa-times"></div>
-          <a href="#" class="nav_item">Home</a>
-          <a href="#card" class="nav_item">Menu</a>
-          <a href="#about" class="nav_item">About</a>
-          <a href="#" class="nav_item">Contact</a>
+          <a href="#" class="nav_item">صفحه اصلی</a>
+          <a href="#card" class="nav_item">منو</a>
+          <a href="#about" class="nav_item">درباره ما</a>
+          <a href="#" class="nav_item">تماس با ما</a>
         </nav>
         <div id="menu" class="fas fa-bars"></div>
       </header>
       <section class="home">
         <div class="content">
-          <h1 class="title">
-            fresh <span>coffee</span> in the <span>morning</span>
-          </h1>
-          <p class="description">high quality coffee, Mocha, Latte</p>
-          <a href="#card" class="btn start-btn">Order now</a>
+          <h1 class="title"><span>قهوه</span> تازه، توی <span>صبح</span></h1>
+          <p class="description">ارائه قهوه با کیفیت، موکا، لته</p>
+          <a href="#card" class="btn start-btn">سفارش دهید</a>
         </div>
         <div class="image">
           <img src="./images/home.png" data-speed="-3" class="move" alt="" />
@@ -63,23 +68,23 @@
       </section>
       <section class="menu" id="menu"></section>
       <section class="about" id="about">
-        <h1 class="about__title line-1 anim-typewriter">About us</h1>
+        <h1 class="about__title line-1 anim-typewriter">درباره ما</h1>
         <p class="about__desc">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eum
-          est sunt? Optio, distinctio! Similique, adipisci a ad at quisquam
-          minima corrupti magnam cupiditate quia tenetur exercitationem officia!
-          Accusamus, deleniti.
+          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
+          از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
+          سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای
+          متنوع با هدف بهبود ابزارهای کاربردی می باشد
         </p>
-        <div class="developed">
+        <div class="developed" style="direction: rtl;">
           <h2 class="developed__title">
-            <span>Designed</span> and <span>developed</span> by
+            <span>دیزاین شده</span> و <span>برنامه نویسی شده</span> توسط
           </h2>
           <div class="developed__container">
             <i class="fa-solid fa-code"></i>
             <a
               class="developed__desc"
               href="https://www.linkedin.com/in/amirkargar/"
-              >Amir Hossein Kargar</a
+              >امیرحسین کارگر</a
             >
             <i class="fa-solid fa-code"></i>
           </div>
@@ -90,5 +95,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <!-- ? JavaScript Main File -->
     <script type="module" src="/src/app.js"></script>
+    <script src="language.js"></script>
   </body>
 </html>
