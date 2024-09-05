@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 @font-face {
   font-family: "iranYekan";
-  src: url("./iranyekan/woff2/IRANYekanWebLight.woff2");
+  src: url("./iranyekan/woff2/IRANYekanWebMedium.woff2");
 }
 
 :root {
@@ -9,6 +9,7 @@
   --secondary-color: #d3ad7f;
   --primary-color: #2a201c;
   --dark-color: #1c1917;
+  --body-color: #e4e4e7;
 }
 .nav-colored {
   background-color: var(--dark-color);
@@ -30,6 +31,7 @@
   text-decoration: none;
   text-transform: capitalize;
   transition: 0.2s linear;
+  color: var(--body-color);
 }
 html {
   font-size: 62.5%;
@@ -70,10 +72,11 @@ section {
 .header .logo img:hover {
   transform: scale(1.2);
 }
+
 .navbar a {
   font-size: 2rem;
   margin-right: 2rem;
-  color: var(--white-color);
+  color: inherit;
 }
 .navbar a:hover {
   color: var(--secondary-color);
@@ -131,10 +134,12 @@ span:hover,
   margin-top: 1rem;
   padding: 1rem 3rem;
   font-size: 1.7rem;
-  color: var(--white-color);
+  color: var(--body-color);
   background: var(--secondary-color);
   cursor: pointer;
   border-radius: 2rem;
+  font-weight: 600;
+  font-style: italic;
 }
 .start-btn:hover,
 .btn:hover {
@@ -203,7 +208,7 @@ span:hover,
 .about {
   background-color: transparent;
   color: var(--white-color);
-  margin-top: 15rem;
+  margin: 15rem 0;
 }
 .about__desc {
   font-size: 1.5rem;
@@ -218,7 +223,11 @@ span:hover,
   line-height: 2;
   position: relative;
   margin-top: 3rem;
-  /* font-size: 1.8rem; */
+}
+.developed__desc {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  margin: 0 1rem;
 }
 .developed__title span {
   color: var(--secondary-color);
@@ -276,14 +285,12 @@ span:hover,
 .language__title {
   margin: 0 2rem;
 }
-/* .language__link:hover {
-  color: var(--secondary-color);
-} */
+
 .language .language__link--active {
   color: var(--secondary-color);
 }
 .language a {
-  color: var(--white-color);
+  color: inherit;
   font-size: 1.5rem;
 }
 .row-reverse {
@@ -303,9 +310,48 @@ span:hover,
 .english {
   margin-right: 2rem;
 }
+.contact {
+  height: 35rem;
+}
+.contact__container {
+  color: var(--white-color);
+}
+.contact__description {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: -3rem;
+}
+.contact-section-container {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-top: 6rem;
+  
+}
+.contact__logo {
+font-size: 4rem; 
+}
+.contact-section__title {
+  font-size: 2.5rem;
+  display: block;
+  margin: 2rem 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: .5rem;
+}
+.contact-section__title:hover {
+  color: var(--secondary-color);
+}
+.contact-section__details {
+  font-size: 1.5rem;
+}
 /* Animation */
 .anim-typewriter {
   animation: typewriter 1s steps(44) 1s 1 normal both,
+    blinkTextCursor 500ms steps(44) infinite normal;
+}
+.anim-typewriter2 {
+  animation: typewriter2 1s steps(44) 1s 1 normal both,
     blinkTextCursor 500ms steps(44) infinite normal;
 }
 @keyframes typewriter {
@@ -314,6 +360,14 @@ span:hover,
   }
   to {
     width: 4.5em;
+  }
+}
+@keyframes typewriter2 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 5.1em;
   }
 }
 @keyframes blinkTextCursor {
