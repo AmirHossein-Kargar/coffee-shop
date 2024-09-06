@@ -10,9 +10,3 @@ For support, buy me a coffee https://buymeacoffee.com/amirkargar
 ## 🔗 Links
 
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/amirkargar)
-
-
-## Screenshots
-
-![App Screenshot](https://i.ibb.co/r7ZFPgc/Screenshot-2024-09-06-231627.png)
-
