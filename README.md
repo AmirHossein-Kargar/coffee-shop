@@ -3,7 +3,7 @@
 
 A coffee shop website for ordering coffee
 
-I have completed my university's final project - a website where you can order coffee. I used HTML, CSS, and JavaScript to create a responsive design for mobile and other devices. My goal is to add new features, such as shopping cart logic. I hope you enjoy it. If you have any suggestions for how I can improve the project, please feel free to contact me. I have completed my university's final project - a website where you can order coffee. I used HTML, CSS, and JavaScript to create a responsive design for mobile and other devices. My goal is to add new features, such as shopping cart logic. I hope you enjoy it. If you have any suggestions for how I can improve the project, please feel free to contact me.
+I have completed my university's final project - a website where you can order coffee. I used HTML, CSS, and JavaScript to create a responsive design for mobile and other devices. My goal is to add new features, such as shopping cart logic. I hope you enjoy it. If you have any suggestions for how I can improve the project, please feel free to contact me.
 ## Support
 
 For support, buy me a coffee https://buymeacoffee.com/amirkargar
